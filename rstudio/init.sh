@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # download rstudio 
-wget https://download1.rstudio.org/rstudio-1.1.383-x86_64.rpm
-sudo yum install --nogpgcheck -y rstudio-1.1.383-x86_64.rpm
+wget https://download2.rstudio.org/rstudio-server-rhel-1.1.383-x86_64.rpm
+sudo yum install --nogpgcheck -y rstudio-server-rhel-1.1.383-x86_64.rpm
 
 # restart rstudio 
 rstudio-server restart 
