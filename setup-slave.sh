@@ -121,7 +121,9 @@ echo 1 > /proc/sys/vm/overcommit_memory
 cat /root/spark-ec2/github.hostkey >> /root/.ssh/known_hosts
 
 sudo yum -y install java-1.8.0
-sudo /usr/sbin/alternatives --config java
+sudo yum -y install java-1.8.0-openjdk-devel
+sudo /usr/sbin/alternatives --set java /usr/lib/jvm/jre-1.8.0-openjdk.x86_64/bin/java
+sudo /usr/sbin/alternatives --set javac /usr/lib/jvm/java-1.8.0-openjdk.x86_64/bin/javac
 
 # Create /usr/bin/realpath which is used by R to find Java installations
 # NOTE: /usr/bin/realpath is missing in CentOS AMIs. See

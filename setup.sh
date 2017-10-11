@@ -76,7 +76,9 @@ setup_slave_end_time="$(date +'%s')"
 echo_time_diff "setup-slave" "$setup_slave_start_time" "$setup_slave_end_time"
 
 sudo yum -y install java-1.8.0
-sudo /usr/sbin/alternatives --config java
+sudo yum -y install java-1.8.0-openjdk-devel
+sudo /usr/sbin/alternatives --set java /usr/lib/jvm/jre-1.8.0-openjdk.x86_64/bin/java
+sudo /usr/sbin/alternatives --set javac /usr/lib/jvm/java-1.8.0-openjdk.x86_64/bin/javac
 
 # Always include 'scala' module if it's not defined as a work around
 # for older versions of the scripts.
