@@ -24,7 +24,7 @@ $BIN_FOLDER/stop-all.sh
 sleep 2
 
 # Start Master
-$BIN_FOLDER/start-master.sh
+sudo $BIN_FOLDER/start-master.sh
 
 # Pause
 sleep 20
