@@ -75,6 +75,11 @@ pssh --inline \
 setup_slave_end_time="$(date +'%s')"
 echo_time_diff "setup-slave" "$setup_slave_start_time" "$setup_slave_end_time"
 
+sudo yum install java-1.8.0
+sudo yum remove java-1.7.0-openjdk
+sudo yum remove java-1.6.0-openjdk
+
+
 # Always include 'scala' module if it's not defined as a work around
 # for older versions of the scripts.
 if [[ ! $MODULES =~ *scala* ]]; then

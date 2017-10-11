@@ -120,6 +120,10 @@ echo 1 > /proc/sys/vm/overcommit_memory
 # TODO(shivaram): Avoid duplicate entries ?
 cat /root/spark-ec2/github.hostkey >> /root/.ssh/known_hosts
 
+sudo yum install java-1.8.0
+sudo yum remove java-1.7.0-openjdk
+sudo yum remove java-1.6.0-openjdk
+
 # Create /usr/bin/realpath which is used by R to find Java installations
 # NOTE: /usr/bin/realpath is missing in CentOS AMIs. See
 # http://superuser.com/questions/771104/usr-bin-realpath-not-found-in-centos-6-5
@@ -132,3 +136,4 @@ popd > /dev/null
 # this is to set the ulimit for root and other users
 echo '* soft nofile 1000000' >> /etc/security/limits.conf
 echo '* hard nofile 1000000' >> /etc/security/limits.conf
+
