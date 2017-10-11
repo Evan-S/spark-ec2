@@ -2,8 +2,8 @@
 
 /root/spark-ec2/copy-dir /root/tachyon
 
-/root/tachyon/bin/tachyon format
+/root/tachyon/bin/alluxio format
 
 sleep 1
 
-/root/tachyon/bin/tachyon-start.sh all Mount
+/root/tachyon/bin/alluxio-start.sh all Mount

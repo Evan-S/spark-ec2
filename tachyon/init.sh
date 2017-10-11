@@ -53,7 +53,7 @@ else
       elif [[ "$HADOOP_MAJOR_VERSION" == "2" ]]; then
         wget https://s3.amazonaws.com/Tachyon/tachyon-$TACHYON_VERSION-cdh4-bin.tar.gz
       else
-        wget http://downloads.alluxio.org/downloads/files/1.6.0/alluxio-1.6.0-hadoop-2.7-bin.tar.gzhttps://s3.amazonaws.com/Tachyon/tachyon-$TACHYON_VERSION-hadoop2.4-bin.tar.gz
+        wget http://downloads.alluxio.org/downloads/files/1.6.0/alluxio-1.6.0-hadoop-2.7-bin.tar.gz
       fi
       if [ $? != 0 ]; then
         echo "ERROR: Unknown Tachyon version"
@@ -62,9 +62,9 @@ else
   esac
 
   echo "Unpacking Tachyon"
-  tar xvzf tachyon-*.tar.gz > /tmp/spark-ec2_tachyon.log
-  rm tachyon-*.tar.gz
-  mv `ls -d tachyon-*` tachyon
+  tar xvzf alluxio-*.tar.gz > /tmp/spark-ec2_tachyon.log
+  rm alluxio-*.tar.gz
+  mv `ls -d aluxio-*` tachyon
 fi
 
 popd > /dev/null
