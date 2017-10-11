@@ -64,7 +64,7 @@ else
   echo "Unpacking Tachyon"
   tar xvzf alluxio-*.tar.gz > /tmp/spark-ec2_tachyon.log
   rm alluxio-*.tar.gz
-  mv `ls -d aluxio-*` tachyon
+  mv `ls -d alluxio-*` tachyon
 fi
 
 popd > /dev/null
